@@ -2,6 +2,9 @@
 
 # This script replaces all filenames containing space characters with an _
 # e.g. 'file one.pdf' -> file_one.pdf
+# TODO: allow specify directory via command-line arguments
+# TOOD: -r recursive option
+
 
 dir=$(pwd)
 
