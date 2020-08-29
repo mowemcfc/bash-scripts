@@ -1,0 +1,14 @@
+#!/bin/bash
+
+# This script replaces all filenames containing space characters with an _
+# e.g. 'file one.pdf' -> file_one.pdf
+
+dir=$(pwd)
+
+for file in "$dir"/*; do
+    if [[ $file =~ ([.!?\w-]* +[.!?\w-]*)+ ]] 
+    then
+        mv "$file" "${file// /_}"
+        echo "${file// /_}"
+    fi
+done
